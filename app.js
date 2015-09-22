@@ -26,12 +26,12 @@ app.use(function(req, res, next) {
 // ROUTES 
 // =============================================================================
 // require the file ./routes/index.js which contains the route for serving the index.html file
-var routes = require('./routes/index');
+// var routes = require('./routes/index');
 // routes for API is in the file ./routes/movies.js
 var movies = require('./routes/movies');
 
 // REGISTER ROUTES -------------------------------
-app.use('/', routes);
+//app.use('/', routes);
 // all api routes will be prefixed with /api
 app.use('/api', movies);
 
