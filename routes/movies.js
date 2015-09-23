@@ -5,9 +5,7 @@ var router = express.Router();
 var mongodb = require('mongodb'); // The native mongodb native driver
 var ObjectId = require('mongodb').ObjectID; // for use when dealing with the _id in the mogodb
 var MongoClient = mongodb.MongoClient;
-//var url = 'mongodb://localhost/moviesApi';
-var url = 'mongodb://keanode:1234abc@ds042888.mongolab.com:42888/moviesapi'
-
+var url = 'mongodb://localhost/moviesApi';
 
 // more routes for our API will happen here
 router.route('/movies')
