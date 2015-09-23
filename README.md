@@ -27,4 +27,4 @@ We will work with mongodb in 2 weeks.
 
 ## Issues
 
-* put is not working when using the frontend. It is working using Postman, Curl etc., so the problem lies in the Angular part - status: to be fixed.
+* PUT is not working when using the frontend. It is working using Postman, Curl etc., so the problem lies in the Angular part - status: to be fixed.
