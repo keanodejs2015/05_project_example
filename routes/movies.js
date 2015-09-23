@@ -14,7 +14,6 @@ router.route('/movies')
 
         MongoClient.connect(url, function(err, db) {
             if (err) {
-                console.log('Unable to connect to the mongoDB server. Error:', err);
                 res.status(500).send(err);
             } else {
                 console.log('Connection established to', url);
@@ -42,7 +41,6 @@ router.route('/movies')
     .get(function(req, res) {
         MongoClient.connect(url, function(err, db) {
             if (err) {
-                console.log('Unable to connect to the mongoDB server. Error:', err);
                 res.status(500).send(err);
             } else {
                 console.log('Connection established to', url);
@@ -63,7 +61,7 @@ router.route('/movies/:id')
 
         MongoClient.connect(url, function(err, db) {
             if (err) {
-
+                res.status(500).send(err);
             } else {
                 var id = ObjectId(req.params.id);
                 console.log(id);
@@ -86,8 +84,8 @@ router.route('/movies/:id')
     .delete(function(req, res) {
         MongoClient.connect(url, function(err, db) {
             if (err) {
-                return console.dir(err);
-            } else {
+                res.status(500).send(err);
+                 } else {
 
                 var collection = db.collection('movies');
 
@@ -106,7 +104,7 @@ router.route('/movies/:id')
     .get(function(req, res) {
         MongoClient.connect(url, function(err, db) {
             if (err) {
-                console.log('Unable to connect to the mongoDB server. Error:', err);
+                res.status(500).send(err);
             } else {
                 console.log('Connection established to', url);
 
